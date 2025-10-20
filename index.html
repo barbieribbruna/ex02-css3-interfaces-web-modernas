@@ -13,13 +13,13 @@
     <link rel="preload" href="assets/img/hero.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/img/hero.jpg" as="image" type="image/jpg">
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/tokens.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/forms.css">
-    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="utilities.css">
 </head>
 
 <body>
@@ -27,9 +27,9 @@
 <header>
   <div class="container navbar">
     <a class="nav-brand" href="index.html" aria-label="Página inicial">
-      <picture>
-        <source srcset="assets/img/logo.avif" type="image/avif">
+      <picture>        
         <source srcset="assets/img/logo.webp" type="image/webp">
+        <source srcset="assets/img/logo.avif" type="image/avif">
         <img src="assets/img/logo.svg" alt="Logo ONG Rede do Bem" width="48" height="48">
       </picture>
       <strong>ONG Rede do Bem</strong>
@@ -43,15 +43,8 @@
     </button>
 
     <nav id="menu" class="nav-menu" aria-label="Principal">
-      <a href="index.html">Início</a>
-      <div class="nav-item">
-        <button aria-haspopup="true" aria-expanded="false">Projetos ▾</button>
-        <div class="submenu" role="menu">
-          <a href="projetos.html#educacao" role="menuitem">Educação</a>
-          <a href="projetos.html#alimentacao" role="menuitem">Alimentação</a>
-          <a href="projetos.html#indicadores" role="menuitem">Indicadores</a>
-        </div>
-      </div>
+      <a href="index.html">Início</a>      
+      <a href="projetos.html">Projetos Sociais</a>
       <a href="cadastro.html">Cadastro</a>
     </nav>
   </div>
@@ -60,16 +53,18 @@
   <main id="conteudo" class="container">
     <section aria-labelledby="h1">
       <h1 id="h1">Missão, Visão e Valores</h1>
-      <p>Nossa missão é promover inclusão e oportunidades por meio de projetos sociais de alto impacto.</p>
+      <p>🌍 Nossa missão é promover inclusão e oportunidades por meio de projetos sociais de alto impacto.</p>
+      <p>👁️ Nossa visão é ser uma rede referência em solidariedade e transformação social, conectando pessoas e comunidades para construir um futuro mais justo, empático e sustentável.</p>
+      <p>💛 Nossos valores são empatia, transparência, colaboração, respeito, sustentabilidade, inovação social e comprometimento.</p>
       <figure class="hero">
         <picture>
-          <source srcset="assets/img/hero.avif" type="image/avif">
           <source srcset="assets/img/hero.webp" type="image/webp">
-          <img src="assets/img/hero.jpg" alt="Equipe da ONG em atividade comunitária"
+          <source srcset="assets/img/hero.avif" type="image/avif">          
+          <img src="assets/img/hero.jpg"
+              alt="Equipe da ONG em atividade comunitária"
               width="1200" height="600" loading="eager">
         </picture>
         <figcaption>Atividades recentes da ONG em parceria com a comunidade.</figcaption>
-      </figure>
     </section>
 
     <section aria-labelledby="hist">

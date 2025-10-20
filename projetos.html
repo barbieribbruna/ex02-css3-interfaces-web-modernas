@@ -5,14 +5,14 @@
   <title>Projetos Sociais — Voluntariado e Doações | ONG Rede do Bem</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Conheça nossos projetos, torne-se voluntário e apoie com doações on-line.">
-  <link rel="icon" href="assets/img/logo.svg">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/forms.css">
-  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="utilities.css">
 </head>
 
 <body>
@@ -21,8 +21,8 @@
   <div class="container navbar">
     <a class="nav-brand" href="index.html" aria-label="Página inicial">
       <picture>
-        <source srcset="assets/img/logo.avif" type="image/avif">
         <source srcset="assets/img/logo.webp" type="image/webp">
+        <source srcset="assets/img/logo.avif" type="image/avif">        
         <img src="assets/img/logo.svg" alt="Logo ONG Rede do Bem" width="48" height="48">
       </picture>
       <strong>ONG Rede do Bem</strong>
@@ -36,15 +36,8 @@
     </button>
 
     <nav id="menu" class="nav-menu" aria-label="Principal">
-      <a href="index.html">Início</a>
-      <div class="nav-item">
-        <button aria-haspopup="true" aria-expanded="false">Projetos ▾</button>
-        <div class="submenu" role="menu">
-          <a href="projetos.html#educacao" role="menuitem">Educação</a>
-          <a href="projetos.html#alimentacao" role="menuitem">Alimentação</a>
-          <a href="projetos.html#indicadores" role="menuitem">Indicadores</a>
-        </div>
-      </div>
+      <a href="index.html">Início</a>      
+      <a href="projetos.html">Projetos Sociais</a>
       <a href="cadastro.html">Cadastro</a>
     </nav>
   </div>
@@ -54,7 +47,7 @@
     <h1>Projetos Sociais</h1>
 
     <section class="grid grid-2" aria-labelledby="lista-projetos">
-      <h2 id="lista-projetos">Lista de alguns projetos</h2>
+      <h2 id="lista-projetos">Confira dois dos nossos projetos</h2>
 
       <article class="card">
         <header><h3>Educação para o futuro!</h3></header>
@@ -64,9 +57,9 @@
                 <source srcset="assets/img/projeto1.webp" type="image/webp">         
                 <img src="assets/img/projeto1.jpg" alt="Aula para crianças e adolescentes carentes" loading="lazy" width="900" height="600">
             </picture>
-          <figcaption>Em parceria com o governo, a ONG Rede do Bem melhora a qualidade da educação pública e oferece suporte.</figcaption>
+          <figcaption>Em parceria com o governo, a ONG Rede do Bem melhora a qualidade da educação pública e oferece suporte adequado.</figcaption>
         </figure>
-        <p>Oferece-se atividades extras, como aulas de informática, reforço em matérias, educação física e arte, em período após a escola.</p>
+        <p>Nós oferecemos atividades extras, como aulas de informática, reforço em matérias, educação física e arte, em período após a escola.</p>
         <p><strong>Impacto:</strong> 2.300 crianças e adolescentes ao ano • <strong>Categoria:</strong> Educação</p>
       </article>
 
@@ -78,9 +71,9 @@
                 <source srcset="assets/img/projeto2.webp" type="image/webp">
                 <img src="assets/img/projeto2.jpg" alt="Atendimento de alimentação em comunidade" loading="lazy" width="900" height="600">
             </picture>
-          <figcaption>Alimentos in natura, priorizando preparações caseiras.</figcaption>
+          <figcaption>Alimentos in natura. Alimentando hoje, transformando o amanhã.</figcaption>
         </figure>
-        <p>Mutirões e campanhas de conscientização.</p>
+        <p>Unindo mãos para que ninguém durma com fome.</p>
         <p><strong>Impacto:</strong> 1.200 atendimentos ao ano • <strong>Categoria:</strong> Alimentação</p>
       </article>
     </section>
@@ -93,24 +86,26 @@
         <li>Taxa de conclusão nos cursos: <strong>87%</strong></li>
         <li>Índice de satisfação dos voluntários: <strong>4,7/5</strong></li>
       </ul>
-      <figure>
+      <figure class="media">
         <picture>
           <source srcset="assets/img/projeto1.avif" type="image/avif">
           <source srcset="assets/img/projeto1.webp" type="image/webp">
-          <img src="assets/img/projeto1.jpg" alt="Capa do vídeo do projeto de educação"
+          <img src="assets/img/projeto1.jpg" alt="Capa da imagem do projeto de educação"
               width="900" height="600" loading="lazy">
         </picture>
+      </figure>
 
+      <figure class="media">
         <video controls preload="metadata" width="900" height="600"
-              poster="assets/img/projeto1.webp">
+              poster="assets/img/video-projeto-poster.webp">
           <source src="assets/media/video-projeto.webm" type="video/webm">
           <source src="assets/media/video-projeto.mp4"  type="video/mp4">
           <source src="assets/media/video-projeto.ogv"  type="video/ogg">
           Seu navegador não suporta vídeo HTML5.
         </video>
+      </figure>
 
         <figcaption>Resumo em vídeo de um dos nossos projetos voltado para crianças e adolescentes.</figcaption>
-      </figure>
     </section>
 
     <section aria-labelledby="vol">

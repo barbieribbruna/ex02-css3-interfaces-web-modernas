@@ -17,3 +17,7 @@ a:hover{text-decoration:underline}
 .skip{position:absolute; inset-block-start:-9999px}
 .skip:focus{inset-block-start:.5rem; inset-inline-start:.5rem; background:var(--white); padding:.5rem 1rem; border:1px solid var(--neutral-300)}
 .sr-only{position:absolute!important; width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+figure, picture {margin: 0; padding: 0;}
+
+img, video {max-width: 100%; height: auto; display: block;}

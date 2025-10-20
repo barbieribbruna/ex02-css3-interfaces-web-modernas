@@ -21,3 +21,7 @@
 .grid-cards{display:grid; gap:var(--space-5)}
 @media (min-width:768px){ .grid-cards{grid-template-columns:repeat(2,1fr)} }
 @media (min-width:1280px){ .grid-cards{grid-template-columns:repeat(3,1fr)} }
+
+.hero {margin-block-start: 16px; margin-block-end: 24px; display: block; text-align: center;}
+
+.hero img {width: 100%; height: auto; display: block; border-radius: 8px;}
