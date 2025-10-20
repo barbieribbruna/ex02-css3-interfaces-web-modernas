@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Cadastro — Voluntário/Doador | ONG Rede do Bem</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Formulário de cadastro com validação HTML5 para voluntários e doadores.">
+  <link rel="icon" href="assets/img/logo.svg">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header>
+  <div class="container navbar">
+    <a class="nav-brand" href="index.html" aria-label="Página inicial">
+      <picture>
+        <source srcset="assets/img/logo.avif" type="image/avif">
+        <source srcset="assets/img/logo.webp" type="image/webp">
+        <img src="assets/img/logo.svg" alt="Logo ONG Rede do Bem" width="48" height="48">
+      </picture>
+      <strong>Rede do Bem</strong>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none"/>
+      </svg>
+      Menu
+    </button>
+
+    <nav id="menu" class="nav-menu" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <div class="nav-item">
+        <button aria-haspopup="true" aria-expanded="false">Projetos ▾</button>
+        <div class="submenu" role="menu">
+          <a href="projetos.html#educacao" role="menuitem">Educação</a>
+          <a href="projetos.html#alimentacao" role="menuitem">Alimentação</a>
+          <a href="projetos.html#indicadores" role="menuitem">Indicadores</a>
+        </div>
+      </div>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="conteudo" class="container">
+    <h1>Cadastro</h1>
+    <p>Preencha seus dados para se tornar <strong>voluntário</strong> ou <strong>doador</strong>. Todos os campos marcados com * são obrigatórios.</p>
+
+    <form action="#" method="post">
+      <!-- Agrupamento 1: Identificação -->
+      <fieldset>
+        <legend>Identificação</legend>
+
+        <label for="nome">Nome completo*</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3" maxlength="120" placeholder="Seu nome completo">
+
+        <label for="email">E-mail*</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="seu@email.com">
+
+        <label for="cpf">CPF*</label>
+        <input id="cpf" name="cpf" inputmode="numeric" autocomplete="off" required
+               placeholder="000.000.000-00"
+               pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+               title="Use o formato 000.000.000-00">
+        
+        <label for="telefone">Telefone*</label>
+        <input id="telefone" name="telefone" inputmode="tel" autocomplete="tel" required
+               placeholder="(00) 00000-0000"
+               pattern="^\(\d{2}\)\s?\d{4,5}-\d{4}$"
+               title="Use o formato (11) 99999-9999">
+        
+        <label for="nascimento">Data de Nascimento*</label>
+        <input id="nascimento" name="nascimento" type="date" required max="2007-12-31">
+      </fieldset>
+
+      <!-- Agrupamento 2: Endereço -->
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <label for="endereco">Endereço*</label>
+        <input id="endereco" name="endereco" type="text" required placeholder="Rua, número e complemento" autocomplete="address-line1">
+
+        <label for="cep">CEP*</label>
+        <input id="cep" name="cep" inputmode="numeric" required placeholder="00000-000"
+               pattern="^\d{5}-\d{3}$" title="Use o formato 00000-000" autocomplete="postal-code">
+
+        <label for="cidade">Cidade*</label>
+        <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
+
+        <label for="estado">Estado (UF)*</label>
+        <select id="estado" name="estado" required autocomplete="address-level1">
+          <option value="" selected disabled>Selecione</option>
+          <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+          <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+          <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+          <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+          <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+          <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+          <option>SP</option><option>SE</option><option>TO</option>
+        </select>
+      </fieldset>
+
+      <!-- Agrupamento 3: Preferências -->
+      <fieldset>
+        <legend>Preferências</legend>
+        <label for="perfil">Perfil*</label>
+        <select id="perfil" name="perfil" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="voluntario">Voluntário</option>
+          <option value="doador">Doador/Apoiador</option>
+        </select>
+
+        <label for="mensagem">Mensagem (opcional)</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos sobre suas motivações."></textarea>
+
+        <label>
+          <input type="checkbox" name="termos" required>
+          Confirmo que li e aceito a <a href="#" target="_blank" rel="noopener">Política de Privacidade</a>. *
+        </label>
+      </fieldset>
+
+      <!-- Mensagem LGPD -->
+        <p>
+            🔒 Seus dados são protegidos conforme a Lei Geral de Proteção de Dados (LGPD). 
+            Utilizamos suas informações apenas para as finalidades informadas e com a devida segurança.
+        </p>
+
+      <button type="submit">Enviar cadastro</button>
+      <p role="status" aria-live="polite" id="status"></p>
+    </form>
+
+    <p><small>Respeitamos as diretrizes WCAG 2.1 AA (navegação por teclado, rótulos, contraste e feedbacks de validação nativos).</small></p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="ano">2025</span> ONG Rede do Bem</p>
+    </div>
+  </footer>
+
+  <!-- JS: ano do rodapé, validação nativa, máscaras e menu -->
+  <script>
+    /* 1) Ano automático no rodapé */
+    const anoEl = document.getElementById('ano');
+    if (anoEl) anoEl.textContent = new Date().getFullYear();
+
+    /* 2) Validação nativa no submit (mantém mensagens do navegador) */
+    const form = document.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        if (!form.checkValidity()) {
+          e.preventDefault();
+          const status = document.getElementById('status');
+          if (status) status.textContent = 'Verifique os campos destacados. Alguns dados estão inválidos.';
+        }
+        // Deixe o navegador exibir os tooltips nativos
+      });
+    }
+
+    /* 3) Máscaras CPF / Telefone / CEP (input) */
+    const $ = (id) => document.getElementById(id);
+
+    function maskCPF(v){
+      return v.replace(/\D/g,'').slice(0,11)
+        .replace(/(\d{3})(\d)/,'$1.$2')
+        .replace(/(\d{3})(\d)/,'$1.$2')
+        .replace(/(\d{3})(\d{1,2})$/,'$1-$2');
+    }
+    function maskTel(v){
+      const d = v.replace(/\D/g,'').slice(0,11);
+      return d.length <= 10
+        ? d.replace(/(\d{2})(\d{4})(\d{0,4})/,'($1) $2-$3')
+        : d.replace(/(\d{2})(\d{5})(\d{0,4})/,'($1) $2-$3');
+    }
+    function maskCEP(v){
+      return v.replace(/\D/g,'').slice(0,8)
+        .replace(/(\d{5})(\d{0,3})/,'$1-$2');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const cpf = $('cpf');      if (cpf) cpf.addEventListener('input', e => e.target.value = maskCPF(e.target.value));
+      const tel = $('telefone'); if (tel) tel.addEventListener('input', e => e.target.value = maskTel(e.target.value));
+      const cep = $('cep');      if (cep) cep.addEventListener('input', e => e.target.value = maskCEP(e.target.value));
+    });
+
+    /* 4) Menu: hambúrguer + dropdown acessível */
+    const toggle = document.querySelector('.nav-toggle');
+    const header = toggle?.closest('header');
+    toggle?.addEventListener('click', () => {
+      const open = header.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    document.querySelectorAll('.nav-item > button').forEach(btn => {
+      const submenu = btn.nextElementSibling;
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        submenu.style.display = expanded ? 'none' : 'block';
+      });
+      btn.addEventListener('blur', () => {
+        btn.setAttribute('aria-expanded', 'false');
+        submenu.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

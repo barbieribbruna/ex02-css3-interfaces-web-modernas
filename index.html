@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Rede do Bem!</title>
+    <meta name="description" content="ONG Rede do Bem: Uma rede solidária conectando pessoas.">
+    <meta property="og:title" content="ONG Rede do Bem">
+    <meta property="og:description" content="Transparência, voluntariado e projetos de impacto social.">
+    <meta property="og:type" content="website">
+    <link rel="preload" href="assets/img/hero.avif" as="image" type="image/avif">
+    <link rel="preload" href="assets/img/hero.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/img/hero.jpg" as="image" type="image/jpg">
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/utilities.css">
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header>
+  <div class="container navbar">
+    <a class="nav-brand" href="index.html" aria-label="Página inicial">
+      <picture>
+        <source srcset="assets/img/logo.avif" type="image/avif">
+        <source srcset="assets/img/logo.webp" type="image/webp">
+        <img src="assets/img/logo.svg" alt="Logo ONG Rede do Bem" width="48" height="48">
+      </picture>
+      <strong>ONG Rede do Bem</strong>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none"/>
+      </svg>
+      Menu
+    </button>
+
+    <nav id="menu" class="nav-menu" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <div class="nav-item">
+        <button aria-haspopup="true" aria-expanded="false">Projetos ▾</button>
+        <div class="submenu" role="menu">
+          <a href="projetos.html#educacao" role="menuitem">Educação</a>
+          <a href="projetos.html#alimentacao" role="menuitem">Alimentação</a>
+          <a href="projetos.html#indicadores" role="menuitem">Indicadores</a>
+        </div>
+      </div>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="conteudo" class="container">
+    <section aria-labelledby="h1">
+      <h1 id="h1">Missão, Visão e Valores</h1>
+      <p>Nossa missão é promover inclusão e oportunidades por meio de projetos sociais de alto impacto.</p>
+      <figure class="hero">
+        <picture>
+          <source srcset="assets/img/hero.avif" type="image/avif">
+          <source srcset="assets/img/hero.webp" type="image/webp">
+          <img src="assets/img/hero.jpg" alt="Equipe da ONG em atividade comunitária"
+              width="1200" height="600" loading="eager">
+        </picture>
+        <figcaption>Atividades recentes da ONG em parceria com a comunidade.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="hist">
+      <h2 id="hist">Histórico e Conquistas</h2>
+      <article class="card">
+        <h3>Nossa rede solidária conecta pessoas há mais de 10 anos.</h3>
+        <p>Projetos em educação, saúde e sustentabilidade atingindo milhares de beneficiários.</p>
+      </article>
+    </section>
+
+    <aside aria-labelledby="transp">
+      <h2 id="transp">Transparência</h2>
+      <ul>
+        <li><a href="assets/media/relatorio-2024.pdf">Relatório Anual 2024 (PDF)</a></li>
+        <li><a href="projetos.html#indicadores">Indicadores de impacto</a></li>
+      </ul>
+    </aside>
+
+    <section aria-labelledby="contato">
+      <h2 id="contato">Contato</h2>
+      <address>
+        <p><strong>Endereço:</strong> Travessa do Relógio Parado, s/n, bairro Céu Azul, cidade de Altaris</p>
+        <p><strong>E-mail:</strong> <a href="mailto:contato@ongrededobem.org">contato@ongrededobem.org</a></p>
+        <p><strong>Telefone:</strong> <a href="tel:+00123456789">+00 12345 6789</a></p>
+      </address>
+    </section>
+  </main>
+
+<footer>
+    <div class="container">
+      <p>&copy; <span id="ano">2025</span> ONG Rede do Bem</p>
+    </div>
+  </footer>
+
+  <!-- JS do menu mobile e submenu -->
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const header = toggle?.closest('header');
+    toggle?.addEventListener('click', () => {
+      const open = header.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    document.querySelectorAll('.nav-item > button').forEach(btn => {
+      const submenu = btn.nextElementSibling;
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        submenu.style.display = expanded ? 'none' : 'block';
+      });
+      btn.addEventListener('blur', () => {
+        btn.setAttribute('aria-expanded', 'false');
+        submenu.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
